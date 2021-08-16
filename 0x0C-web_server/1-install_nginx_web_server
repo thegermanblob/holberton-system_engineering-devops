@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# installs nginx and sets the index.html file
+sudo apt-get update
+sudo apt-get install nginx -y
+echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
