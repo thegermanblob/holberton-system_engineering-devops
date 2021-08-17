@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# installs nginx and sets the index.html file
+newstring="server {\n	server_name thegb.tech;\n	rewrite ^/$ https://www.youtube.com/watch?v=dQw4w9WgXcQ permanent;\n	}"
+sudo apt-get update
+sudo apt-get install nginx -y
+sudo sed -i "s/# server_tokens off;/$newstring/" /etc/nginx/nginx.conf
