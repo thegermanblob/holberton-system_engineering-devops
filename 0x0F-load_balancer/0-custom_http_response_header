@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# installs nginx and sets the index.html file
+newstring="server {\n\tadd_header X-Served-By \$hostname;\n"
+sudo apt-get update
+sudo apt-get install nginx -y
+sudo sed -i "s/server {/$newstring/" /etc/nginx/sites-available/default
+sudo systemctl restart nginx
