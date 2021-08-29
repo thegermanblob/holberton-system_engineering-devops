@@ -1,7 +1,26 @@
 #!/usr/bin/env bash
 # installs nginx and sets the index.html file
-newstring="server {\n\tadd_header X-Served-By \$hostname [always];\n"
 sudo apt-get update
 sudo apt-get install nginx -y
-sudo sed -i "s/server {/$newstring/" /etc/nginx/sites-available/default
+echo "Holberton School" > var/www/html/index.html
+echo "not found" > /var/www/html/404.html
+
+printf %s "server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+	add_header X-Served-By $HOSTNAME;
+	root /var/www/html
+	index index.html;
+
+	location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+	}
+
+	error_page 404 /404.html;
+	location /404 {
+		root /var/www/html;
+		internal;
+	}
+}" > /etc/nginx/sites-available/default
+
 sudo systemctl restart nginx
