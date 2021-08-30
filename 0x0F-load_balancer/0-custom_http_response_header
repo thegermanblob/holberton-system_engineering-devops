@@ -2,14 +2,14 @@
 # installs nginx and sets the index.html file
 sudo apt-get update
 sudo apt-get install nginx -y
-echo "Holberton School" > var/www/html/index.html
+mkdir -p /var/www/html
+echo "Holberton School" > /var/www/html/index.html
 echo "not found" > /var/www/html/404.html
 
-printf %s "server {
+ sudo printf %s "server {
 	listen 80 default_server;
-	listen [::]:80 default_server;
-	add_header X-Served-By $HOSTNAME;
-	root /var/www/html
+	add_header X-Served-By \$HOSTNAME;
+	root /var/www/html;
 	index index.html;
 
 	location /redirect_me {
@@ -23,4 +23,4 @@ printf %s "server {
 	}
 }" > /etc/nginx/sites-available/default
 
-sudo systemctl restart nginx
+service nginx restart
