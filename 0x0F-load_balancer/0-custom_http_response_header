@@ -22,5 +22,7 @@ echo "not found" > /var/www/html/404.html
 		internal;
 	}
 }" > /etc/nginx/sites-available/default
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 
-service nginx restart
+
+sudo service nginx restart
