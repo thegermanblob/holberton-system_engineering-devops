@@ -6,7 +6,7 @@ mkdir -p /var/www/html
 echo "Holberton School" > /var/www/html/index.html
 echo "not found" > /var/www/html/404.html
 
- sudo printf %s "server {
+printf %s "server {
 	listen 80 default_server;
 	add_header X-Served-By \$HOSTNAME;
 	root /var/www/html;
@@ -21,7 +21,7 @@ echo "not found" > /var/www/html/404.html
 		root /var/www/html;
 		internal;
 	}
-}" > /etc/nginx/sites-available/default
+}" | sudo tee /etc/nginx/sites-available/default
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 
 
