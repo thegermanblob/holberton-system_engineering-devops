@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# installs haproxy and configures the load balancer
 sudo apt install haproxy -y;
 printf %s "
 global
@@ -44,4 +45,4 @@ listen firstbalance
 
 haproxy -f /etc/heproxy/haproxy.cfg -c 
 
-service haproxy restart
+service haproxy restarthtml
