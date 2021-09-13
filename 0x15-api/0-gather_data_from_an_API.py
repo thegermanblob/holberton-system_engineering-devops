@@ -10,11 +10,15 @@ def get_employ(emp_id):
     emp_dict = emp_r.json()
     emp_todo = requests.get(url + 'todos/', params={'userId': emp_id}).json()
     todo_comp = 0
+    comp_task = []
     for item in emp_todo:
         if item['completed']:
             todo_comp += 1
+            comp_task.append(item['title'])
     print ('Employee {} is done with tasks({}/{}):'
            .format(emp_dict["name"], todo_comp, len(emp_todo)))
+    for item in comp_task:
+        print("\t {}".format(item))
 
 
 if __name__ == "__main__":
