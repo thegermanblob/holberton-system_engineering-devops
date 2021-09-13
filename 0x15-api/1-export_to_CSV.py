@@ -17,7 +17,7 @@ def get_employ(emp_id):
     for item in emp_todo:
         result_item = dict()
         item.pop('id')
-        item['username'] = emp_dict["name"]
+        item['username'] = emp_dict["username"]
         for k in keys:
             result_item[k] = str(item[k])
         result.append(result_item)
