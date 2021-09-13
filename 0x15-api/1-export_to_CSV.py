@@ -21,7 +21,7 @@ def get_employ(emp_id):
         for k in keys:
             result_item[k] = str(item[k])
         result.append(result_item)
-    with open('USER_ID.csv', 'w') as csvfile:
+    with open('{}.csv'.format(emp_id), 'w') as csvfile:
         writer = csv.DictWriter(csvfile,
                                 fieldnames=keys, quoting=csv.QUOTE_ALL)
         writer.writerows(result)
