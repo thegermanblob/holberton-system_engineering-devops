@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Gets all todo task for an employee and out puts a json file """
 from collections import OrderedDict
 import json
 import requests
@@ -26,7 +27,7 @@ def get_employ(emp_id):
         result.append(result_item)
 
     json_dict[emp_id] = result
-    with open ("{}.json".format(emp_id), "w") as jsonfile:
+    with open("{}.json".format(emp_id), "w") as jsonfile:
         json.dump(json_dict, jsonfile)
 
 if __name__ == "__main__":
