@@ -17,7 +17,7 @@ def get_employ(emp_id):
             todo_comp += 1
             comp_task.append(item.get('title'))
     print('Employee {} is done with tasks({}/{}):'
-           .format(emp_dict.get("name"), todo_comp, len(emp_todo)))
+          .format(emp_dict.get("name"), todo_comp, len(emp_todo)))
     for item in comp_task:
         print("\t {}".format(item))
 
