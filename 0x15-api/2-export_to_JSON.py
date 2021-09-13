@@ -18,7 +18,7 @@ def get_employ(emp_id):
     for item in emp_todo:
         result_item = OrderedDict()
         item.pop('id')
-        item['username'] = emp_dict["username"]
+        item['username'] = emp_dict.get("username")
         for k in keys:
             if k == "title":
                 result_item["task"] = str(item[k])
