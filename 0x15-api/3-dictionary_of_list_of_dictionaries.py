@@ -23,9 +23,9 @@ def get_employ():
             item['username'] = emp_dict[i].get("username")
             for k in keys:
                 if k == "title":
-                    result_item["task"] = str(item[k])
+                    result_item["task"] = item[k]
                 else:
-                    result_item[k] = str(item[k])
+                    result_item[k] = item[k]
             result.append(result_item)
 
         json_dict[emp_dict[i].get('id')] = result
