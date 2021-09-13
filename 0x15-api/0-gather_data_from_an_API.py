@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" gets emplyee complition of todos """
 import requests
 import sys
 
