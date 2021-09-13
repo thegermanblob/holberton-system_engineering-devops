@@ -13,7 +13,7 @@ def get_employ(emp_id):
     todo_comp = 0
     comp_task = []
     for item in emp_todo:
-        if item['completed']:
+        if item.get('completed'):
             todo_comp += 1
             comp_task.append(item.get('title'))
     print ('Employee {} is done with tasks({}/{}):'
