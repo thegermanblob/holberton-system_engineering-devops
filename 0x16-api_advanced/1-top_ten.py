@@ -11,6 +11,7 @@ def top_ten(subreddit):
     param = {'limit': '10'}
     r = requests.get(url, headers=head, params=param, allow_redirects=False)
     if r.status_code != 200:
+        print("None")
         return 0
     r = r.json().get("data")
     for cild in r.get('children'):
