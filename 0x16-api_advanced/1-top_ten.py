@@ -10,7 +10,7 @@ def top_ten(subreddit):
     param = {'limit': '10'}
     r = requests.get(url, params=param, allow_redirects=False)
     if r.status_code != 200:
-        return None
+        return 0
     r = r.json().get("data")
     for cild in r.get('children'):
         print(cild.get('data').get('title'))
