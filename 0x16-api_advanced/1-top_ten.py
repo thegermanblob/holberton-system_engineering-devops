@@ -4,9 +4,9 @@
 import requests
 
 
-def top_ten(sub):
+def top_ten(subreddit):
     """ prints the top ten hot posts for a given sub reddit """
-    url = 'https://www.reddit.com/r/{}/.json'.format(sub)
+    url = 'https://www.reddit.com/r/{}/.json'.format(subreddit)
     param = {'limit': '10'}
     r = requests.get(url, params=param)
     if r.status_code != 200:
