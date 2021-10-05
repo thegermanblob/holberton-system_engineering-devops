@@ -15,7 +15,6 @@ contained follows:
 * [0x05. Processes and signals](./0x05-processes_and_signals)
 * [0x06. Regular expression](./0x06-regular_expressions)
 * [0x07. Networking basics #0](./0x07-networking_basics)
-* [0x08. Networking basics #1](./0x08-networking_basics_2)
 * [0x09. Web infrastructure design](./0x09-web_infrastructure_design)
 * [0x0A. SSH](./0x0A-ssh)
 * [0x0B. Web server](./0x0B-web_server)
