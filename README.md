@@ -48,7 +48,9 @@ using project-based peer learning. For more information, visit
 [this link](https://www.holbertonschool.com/).
 
 <p align="center">
-  <img src="http://www.holbertonschool.com/holberton-logo.png"
+  <img src="https://assets.website-files.com/6105315644a26f77912a1ada/610540e8b4cd6969794fe673_Holberton_School_logo-04-04.svg"
        alt="Holberton School logo"
+       width=400
+       height=200
   >
 </p>
